@@ -1,5 +1,5 @@
 <% $client.user_timeline("gem") %>
-<% @tweets = $client.user_timeline(@user.handle) %>
+<%= @tweets = $client.user_timeline(@user.handle) %>
 <br>
 <br>
 <% @tweets.each do |id| %>
