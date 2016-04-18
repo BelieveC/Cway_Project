@@ -2,8 +2,8 @@
 <%= @tweets = $client.user_timeline(@user.handle) %>
 <br>
 <br>
-<% @tweets.each do |id| %>
-	<%= $client.status(id) %>
+<% @tweets.each do |tweet| %>
+	<%= tweet.text %>
 	<br>
 <% end %>
 <%=link_to "Edit",edit_user_path %> |
