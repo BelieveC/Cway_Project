@@ -1,11 +1,13 @@
 <% $client.user_timeline("gem") %>
-<%= @tweets = $client.user_timeline(@user.handle) %>
+<% @tweets = $client.user_timeline(@user.handle) %>
 <br>
 <br>
+<ul>
 <% @tweets.each do |tweet| %>
-	<%= tweet.text %>
+	<li><%= tweet.text %></li>
 	<br>
 <% end %>
+</ul>
 <%=link_to "Edit",edit_user_path %> |
 <%=link_to "Delete",@user, method: :delete,data:{confirm:"Are you Sure?"}%> |
 <%=link_to "Back",:back %>
