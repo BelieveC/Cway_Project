@@ -3,6 +3,7 @@
 <br>
 <br>
 <% @tweets.each do |id| %>
+	<% $client.show("gem") %>
 	<%= $client.show(id) %>
 	<br>
 <% end %>
