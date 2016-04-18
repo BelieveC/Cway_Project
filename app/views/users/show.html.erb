@@ -3,7 +3,8 @@
 <br>
 <br>
 <% @tweets.each do |id| %>
-	<%= id %>
+	<% $client.status("gem") %>
+	<%= $client.status(id) %>
 	<br>
 <% end %>
 <%=link_to "Edit",edit_user_path %> |
